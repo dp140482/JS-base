@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 6</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let payment = +prompt("Введите сумму денег для отправки на счёт в банке:");
+        let lastDigit = payment % 10;
+        let twoDigits = payment % 100;
+        let currency = "руб";
+        if (twoDigits >= 11 && twoDigits <= 14) {
+            currency += "лей";
+        } else switch (lastDigit) {
+            case 1:
+                currency += "ль";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                currency += "ля";
+                break;
+            default:
+                currency += "лей";
+        }
+        alert("Ваша сумма в " + payment + " " + currency + " успешно зачислена.");
+    </script>
+</body>
+
+</html>
