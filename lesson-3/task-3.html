@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 урок 3</title>
+</head>
+
+<body>
+    <script>
+        const products = [{
+            id: 3,
+            price: 200,
+        }, {
+            id: 4,
+            price: 900,
+        }, {
+            id: 1,
+            price: 1000,
+        }];
+
+        const discountPercent = 0.15;
+        products.forEach(function(prod) {
+            let discountPrice = prod.price * (1 - discountPercent);
+            let resultStr = "Цена товара " + prod.id + " со скидкой "
+            resultStr += discountPercent * 100 + "% составляет " + discountPrice;
+            console.log(resultStr);
+        });
+    </script>
+</body>
+
+</html>
