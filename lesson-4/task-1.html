@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 урок 4</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function createObject(num) {
+            if (Number.isNaN(num)) {
+                console.log("num is NaN");
+                return {};
+            }
+            if (!Number.isInteger(num)) {
+                console.log("num is not integer");
+                return {};
+            }
+            if (num < 0 || num > 999) {
+                console.log("num is out of range [0, 999]");
+                return {};
+            }
+            let ob = {};
+            let n = num;
+            ob.units = n % 10;
+            n = (n - ob.units) / 10;
+            ob.tens = n % 10;
+            n = (n - ob.tens) / 10;
+            ob.hundreds = n % 10;
+            return ob;
+        }
+
+        //Testing:
+        const res = createObject(54);
+        res.print = function() {
+            return "hundreds: " + this.hundreds + "; tens: " + this.tens + "; units: " + this.units + ";";
+        }
+        alert(res.print());
+    </script>
+</body>
+
+</html>
