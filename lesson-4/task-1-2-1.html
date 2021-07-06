@@ -21,7 +21,7 @@
 
         Post.prototype.edit = function(text) {
             this.text = text;
-        }
+        };
 
         function AttachedPost(author, text, date) {
             Post.call(this, author, text, date);
@@ -33,7 +33,7 @@
 
         AttachedPost.prototype.makeTextHighlighted = function() {
             this.highlighted = true;
-        }
+        };
     </script>
 </body>
 

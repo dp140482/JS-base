@@ -15,15 +15,15 @@
         function createObject(num) {
             if (Number.isNaN(num)) {
                 console.log("num is NaN");
-                return Object.create({})
+                return {};
             }
             if (!Number.isInteger(num)) {
                 console.log("num is not integer");
-                return Object.create({})
+                return {};
             }
             if (num < 0 || num > 999) {
                 console.log("num is out of range [0, 999]");
-                return Object.create({})
+                return {};
             }
             let ob = {};
             let n = num;
