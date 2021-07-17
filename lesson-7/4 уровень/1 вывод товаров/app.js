@@ -120,5 +120,10 @@ function showCategory(category) {
  * в верху этого файла.
  */
 function getProductMarkup(product) {
-    return `<div class="product"><div>${product.name}</div><img src="${product.imageUrl}" alt=""><div>${product.price}</div><a href="https://example.com/producs/${product.id}">Подробнее</a></div>`;
+    return `<div class="product">
+                <div>${product.name}</div>
+                <img src="${product.imageUrl}" alt="">
+                <div>${product.price}</div>
+                <a href="https://example.com/producs/${product.id}">Подробнее</a>
+            </div>`;
 }
